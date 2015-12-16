@@ -10,7 +10,9 @@ namespace WpfFirst
         {
             this.model = new Model();
             this.CopyCmd = new DelegateCommand();
-            this.CopyCmd.ExecuteCommand = new Action<object>(this.model.Copy);
+            
+            this.CopyCmd.ExecuteCommand = new Action<object>(this.model.Check);
+            this.CopyCmd.ExecuteCommand += new Action<object>(this.model.Copy);
             this.ClearCmd = new DelegateCommand();
             this.ClearCmd.ExecuteCommand = new Action<object>(this.model.Clear);
         }

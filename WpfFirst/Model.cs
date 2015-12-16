@@ -6,7 +6,7 @@ namespace WpfFirst
 {
     class Model : NotificationObject
     {
-        private string _wpf = "WPF";
+        private string _wpf = " WPF";
 
         public string WPF
         {
@@ -21,12 +21,20 @@ namespace WpfFirst
         public void Copy(object obj)
         {
             this.WPF += " WPF";
-            Console.Write("{0}*{1}", (1 == 2 ? 3 : 4) / 2, "10");
+            Console.Write("{0}*{1}", (1 == 2 ? 3 : 4) / 2, "10 ");
         }
         public void Clear(object obj)
         {
             this.WPF = null;
+            Console.Write("clear ");
         }
-
+        public void Check(object obj)
+        {
+            if (this.WPF == " WPF WPF WPF WPF") 
+            {
+                Console.Write("return ");
+                Clear(obj);
+            }
+        }
     }
 }
