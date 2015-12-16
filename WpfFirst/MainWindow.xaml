@@ -8,11 +8,7 @@
             <Button Command="{Binding CopyCmd}" Height="50" Width="232" Content="Copy"/>
             <Button Command="{Binding ClearCmd}" Height="50" Width="232" Content="Clear"/>
         </StackPanel>
-        <DataGrid HorizontalAlignment="Left" Margin="63,39,0,0" VerticalAlignment="Top" Width="376" Height="81">
-            <DataGrid.Columns>
-                <DataGridTextColumn/>
-                <DataGridTextColumn/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,112,0,0" TextWrapping="Wrap" Text="{Binding model.WPF}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="148,112,0,0" TextWrapping="Wrap" Text="{Binding model.WPF}" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.625,0.609"/>
     </Grid>
 </Window>
